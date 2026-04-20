@@ -241,7 +241,7 @@ body::before {
 }
 
 /* ── PROJECTS ── */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: rgba(10,10,10,0.1); }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 1px; background: rgba(10,10,10,0.1); }
 .project-card {
   background: #fff; padding: 3rem; position: relative; overflow: hidden; cursor: default;
   transition: background 0.3s ease;
@@ -353,13 +353,10 @@ body::before {
   .about-grid, .edu-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
   .skills-split { grid-template-columns: 1fr; gap: 3rem; }
   .exp-entry { grid-template-columns: 1fr; gap: 0.5rem; }
-  .footer-bw { padding: 2rem 1.5rem; flex-direction: column; gap: 1.5rem; text-align: center; }
-  .footer-right { text-align: center; }
+  .footer-bw { padding: 2rem 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
   .projects-grid { grid-template-columns: 1fr; }
-  .project-card { padding: 2rem 1.5rem; }
   .about-facts { grid-template-columns: 1fr 1fr; }
 }
-
 `;
 
 export default function Portfolio() {
