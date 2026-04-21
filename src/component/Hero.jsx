@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from "styled-components";
 
-import profile from "../assets/pic3.png"
+import profile from "../assets/lap.jpg"
 import { href } from 'react-router-dom';
 
 export default function Hero() {
@@ -46,21 +46,27 @@ export default function Hero() {
             id="about"
             style={{
                 minHeight: '100vh',
-                paddingTop: '45px', /* exact navbar height */
+                paddingTop: '70px', /* Updated to match navbar height */
                 position: 'relative',
                 display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
                 overflow: 'hidden',
                 background: '#f6f6f4',
+                textAlign: 'center',
+                padding: '2rem',
             }}
         >
-            {/* ── LEFT CONTENT ── */}
+            {/* ── CONTENT ── */}
             <div
                 style={{
-                    flex: '0 0 55%',
+                    maxWidth: '1000px',
+                    width: '100%',
                     display: 'flex',
                     flexDirection: 'column',
+                    alignItems: 'center',
                     justifyContent: 'center',
-                    padding: '5rem 4rem 5rem 5rem',
                     position: 'relative',
                     zIndex: 2,
                     opacity: visible ? 1 : 0,
@@ -78,7 +84,8 @@ export default function Hero() {
                     marginBottom: '1.8rem',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: 10,
+                    justifyContent: 'center',
+                    gap: 15,
                 }}>
                     <span style={{ width: 28, height: 1, background: '#999', display: 'inline-block' }} />
                     Software Developer & Engineer
@@ -88,12 +95,13 @@ export default function Hero() {
                 {/* Name */}
                 <h1 style={{
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: 'clamp(3.8rem, 8vw, 8rem)',
+                    fontSize: 'clamp(3.5rem, 10vw, 8rem)',
                     fontWeight: 900,
-                    lineHeight: 0.88,
+                    lineHeight: 0.9,
                     letterSpacing: '-4px',
                     color: '#0a0a0a',
                     marginBottom: '2rem',
+                    textAlign: 'center',
                 }}>
                     SHIVA<br />
                     <span style={{
@@ -106,34 +114,47 @@ export default function Hero() {
                 <div style={{
                     borderTop: '1px solid rgba(10,10,10,0.12)',
                     borderBottom: '1px solid rgba(10,10,10,0.12)',
-                    padding: '1.2rem 0',
-                    marginBottom: '2.2rem',
+                    padding: '1.5rem 0',
+                    marginBottom: '2.5rem',
                     display: 'flex',
-                    gap: '2rem',
-                    alignItems: 'flex-start',
-                    flexWrap: 'wrap',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '1.5rem',
+                    width: '100%',
+                    maxWidth: '700px',
                 }}>
-                    <p style={{ color: '#666', fontSize: '0.88rem', lineHeight: 1.75, margin: 0, flex: '1 1 auto', minWidth: '200px' }}>
+                    <p style={{ 
+                        color: '#666', 
+                        fontSize: '1rem', 
+                        lineHeight: 1.7, 
+                        margin: 0,
+                        maxWidth: '600px'
+                    }}>
                         Software Developer with 1 year of experience building scalable
                         web applications. Passionate about cloud infrastructure and clean APIs.
                     </p>
                     <div style={{
                         fontFamily: 'Space Mono, monospace',
-                        fontSize: '0.78rem',
+                        fontSize: '0.9rem',
                         color: '#0a0a0a',
                         fontWeight: 700,
                         whiteSpace: 'nowrap',
-                        borderLeft: '1px solid rgba(10,10,10,0.15)',
-                        paddingLeft: '1.5rem',
-                        minWidth: 140,
-                        paddingTop: '0.2rem',
+                        padding: '0.5rem 1rem',
+                        background: 'rgba(10,10,10,0.05)',
+                        borderRadius: '4px',
                     }}>
                         {display}<span style={{ animation: 'blink 1s infinite', display: 'inline-block' }}>|</span>
                     </div>
                 </div>
 
                 {/* Buttons */}
-                <div style={{ display: 'flex', gap: '1rem', marginBottom: '3rem' }}>
+                <div style={{ 
+                    display: 'flex', 
+                    gap: '1.5rem', 
+                    marginBottom: '3rem',
+                    justifyContent: 'center',
+                    flexWrap: 'wrap'
+                }}>
                     <StyledWrapper>
                         <button onClick={() =>
                             document.getElementById('contact')
@@ -143,95 +164,37 @@ export default function Hero() {
                         </button>
                     </StyledWrapper>
 
-                         <StyledWrapper>
+                    <StyledWrapper>
                         <button onClick={() =>
                             window.open('https://linkedin.com/in/shiv-jk', '_blank')
                         }>
                             <span>LinkedIn ↗</span>
                         </button>
                     </StyledWrapper>
-
-                
-                  
-                    {/* <a
-                        href="https://linkedin.com/in/shi-jk"
-                        target="_blank"
-                        rel="noreferrer"
-                        style={{
-                            padding: '0.9rem 2rem',
-                            borderRadius: '100px',
-                            border: '1.5px solid rgba(10,10,10,0.25)',
-                            background: 'transparent',
-                            color: '#0a0a0a',
-                            fontFamily: 'Space Grotesk, sans-serif',
-                            fontWeight: 700,
-                            fontSize: '0.9rem',
-                            cursor: 'pointer',
-                            textDecoration: 'none',
-                            transition: 'border-color 0.2s, background 0.2s, transform 0.2s',
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            letterSpacing: '0.3px',
-                        }}
-                        onMouseOver={e => { e.currentTarget.style.background = 'rgba(10,10,10,0.06)'; e.currentTarget.style.borderColor = '#0a0a0a'; e.currentTarget.style.transform = 'translateY(-2px)'; }}
-                        onMouseOut={e => { e.currentTarget.style.background = ''; e.currentTarget.style.borderColor = ''; e.currentTarget.style.transform = ''; }}
-                    >
-                        LinkedIn
-                    </a> */}
                 </div>
 
-           
-            </div>
-
-            {/* ── RIGHT IMAGE ── */}
-            <div style={{
-                flex: '0 0 45%',
-                position: 'relative',
-                overflow: 'hidden',
-            }}>
-                {/* Fade gradient on left edge to blend with left section */}
+                {/* Location Badge */}
                 <div style={{
-                    position: 'absolute',
-                    left: 0, top: 0, bottom: 0,
-                    width: '80px',
-                    background: 'linear-gradient(to right, #f6f6f4, transparent)',
-                    zIndex: 2,
-                    pointerEvents: 'none',
-                }} />
-
-                <img
-                    src={profile}
-                    alt="Shivashankar J"
-                    style={{
-                        width: '100%',
-                        height: '85%',
-                        objectFit: 'cover',
-                        objectPosition: 'center top',
-                        filter: 'grayscale(100%)',
-                        display: 'block',
-                    }}
-                />
-
-                {/* Name watermark overlay on image */}
-                <div style={{
-                    position: 'absolute',
-                    bottom: '8rem',
-                    right: '2rem',
-                    zIndex: 3,
-                    textAlign: 'right',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    gap: '0.5rem',
                 }}>
                     <div style={{
                         background: 'rgba(10,10,10,0.85)',
                         color: '#fff',
-                        padding: '1rem 1.4rem',
+                        padding: '0.8rem 1.2rem',
                         fontFamily: 'Space Mono, monospace',
                         fontSize: '0.7rem',
                         letterSpacing: '2px',
                         textTransform: 'uppercase',
+                        borderRadius: '2px',
                     }}>
-                        📍 Chennai, India<br />
-                        <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.62rem' }}>Available for work</span>
+                        📍 Chennai, India
                     </div>
+                    <span style={{ color: '#999', fontSize: '0.62rem', letterSpacing: '1px', textTransform: 'uppercase' }}>
+                        Available for work
+                    </span>
                 </div>
             </div>
         </section>
